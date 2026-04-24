@@ -34,6 +34,7 @@ Este repositório contém o código-fonte e os dados utilizados no artigo submet
 | **FedAdam** | Otimização adaptativa | Flower (FedAdam) |
 
 ## Estrutura do Repositório
+```bash
 SBPO2026-fl-algorithm/
 ├── data/
 │   └── febre_amarela_casoshumanos.csv
@@ -43,6 +44,7 @@ SBPO2026-fl-algorithm/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
+```
 
 ## Reprodutibilidade
 
@@ -76,6 +78,10 @@ Este repositório contém todos os elementos necessários para reproduzir os exp
 4. Execute o notebook spbo2026_federated_learning.ipynb.
 
 ## Executando no Google Colab
+
+Para abrir diretamente no Google Colab [![clique aqui](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Lima-PPGEP/SBPO2026-fl-algorithm/blob/main/notebooks/spbo2026_federated_learning.ipynb)
+
+Ou siga as instruções abaixo:
 
 1. Faça o upload do notebook para o Google Colab ou abra diretamente:
    ```bash
