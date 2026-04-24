@@ -79,7 +79,7 @@ Este repositório contém todos os elementos necessários para reproduzir os exp
 
 ## Executando no Google Colab
 
-Para abrir diretamente no Google Colab clique aqui [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Lima-PPGEP/SBPO2026-fl-algorithm/blob/main/notebooks/spbo2026_federated_learning.ipynb){:target="_blank"}
+Para abrir diretamente no Google Colab clique aqui <a href="https://colab.research.google.com/github/Lima-PPGEP/SBPO2026-fl-algorithm/blob/main/notebooks/spbo2026_federated_learning.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 
 Ou siga as instruções abaixo:
 
