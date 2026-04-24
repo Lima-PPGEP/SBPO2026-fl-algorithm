@@ -53,7 +53,7 @@ Este repositório contém todos os elementos necessários para reproduzir os exp
 3. **Dependências**: `requirements.txt`
 
 
-## Configuração do Ambiente
+## Executando no VSCode
 
 1. Clone o repositório:
    ```bash
@@ -68,10 +68,24 @@ Este repositório contém todos os elementos necessários para reproduzir os exp
    venv\Scripts\activate     # Windows
    ```
 
-3. Instale as dependências::
+3. Instale as dependências:
    ```bash
    pip install -r requirements.txt
     ```
 
 4. Execute o notebook spbo2026_federated_learning.ipynb.
 
+## Executando no Google Colab
+
+1. Faça o upload do notebook para o Google Colab ou abra diretamente:
+   ```bash
+   !git clone https://github.com/Lima-PPGEP/SBPO2026-fl-algorithm.git
+   %cd SBPO2026-fl-algorithm
+   ```
+
+2. Instale a única biblioteca que não vem por padrão:
+   ```bash
+   !pip install flwr
+    ```
+
+3. As demais bibliotecas (pandas, numpy, scikit-learn, matplotlib) já estão pré-instaladas no Colab.
