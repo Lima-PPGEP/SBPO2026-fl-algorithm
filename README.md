@@ -54,6 +54,10 @@ Este repositório contém todos os elementos necessários para reproduzir os exp
 2. **Código**: Jupyter Notebook em `notebooks/`
 3. **Dependências**: `requirements.txt`
 
+## Pré-requisitos
+
+- Python 3.12 ou superior
+- VSCode com extensão Jupyter instalada
 
 ## Executando no VSCode
 
@@ -63,11 +67,18 @@ Este repositório contém todos os elementos necessários para reproduzir os exp
    cd SBPO2026-fl-algorithm
    ```
 
-2. Crie e ative o ambiente virtual (Python 3.12):
+2. Crie e ative o ambiente virtual:
+
+   Windows
    ```bash
    python -m venv venv
-   source venv/bin/activate  # Linux/Mac
    venv\Scripts\activate     # Windows
+   ```
+
+   Linux
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
    ```
 
 3. Instale as dependências:
@@ -75,23 +86,22 @@ Este repositório contém todos os elementos necessários para reproduzir os exp
    pip install -r requirements.txt
     ```
 
-4. Execute o notebook spbo2026_federated_learning.ipynb.
-
-## Executando no Google Colab
-
-Para abrir diretamente no Google Colab clique aqui [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Lima-PPGEP/SBPO2026-fl-algorithm/blob/main/notebooks/spbo2026_federated_learning.ipynb)
-
-Ou siga as instruções abaixo:
-
-1. Faça o upload do notebook para o Google Colab ou abra diretamente:
+4. Configure o kernel do Jupyter:
    ```bash
-   !git clone https://github.com/Lima-PPGEP/SBPO2026-fl-algorithm.git
-   %cd SBPO2026-fl-algorithm
-   ```
-
-2. Instale a única biblioteca que não vem por padrão:
-   ```bash
-   !pip install flwr
+   python -m ipykernel install --user --name=fl-sbpo2026 --display-name="FL SBPO (venv)"
     ```
 
-3. As demais bibliotecas (pandas, numpy, scikit-learn, matplotlib) já estão pré-instaladas no Colab.
+5. Abra o notebook no VSCode:
+   ```bash
+   code notebooks/spbo2026_federated_learning.ipynb
+    ```
+
+6. Selecione o kernel correto:
+- Com o Jupyter Notbook aberto, clique no nome do kernel no canto superior direito do notebook no VSCode
+- Escolha "FL SBPO (venv)" na lista
+
+7. Execução:
+- Caso deseje execute as celulas do Jupyter Notebook utilizando Run All ou Ctrl+F5
+
+## Nota sobre o Google Colab
+O Colab não é recomendado para este notebook devido a conflitos de versão do Flower com as bibliotecas pré-instaladas. Utilize o ambiente local (VSCode) para reproduzir os experimentos.
