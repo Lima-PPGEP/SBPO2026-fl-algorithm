@@ -1,37 +1,21 @@
 # SBPO 2026 - Federated Learning para Febre Amarela
 
+# Federated Learning para Febre Amarela
+
 ## Sobre o Projeto
 
-Este repositório contém o código-fonte e os dados utilizados no artigo submetido ao XLVII SBPO (Simpósio Brasileiro de Pesquisa Operacional), que compara algoritmos de Aprendizado Federado (FedAvg, FedProx, FedAvgM, FedAdam) na predição de óbito por febre amarela utilizando Regressão Logística.
+Este repositório contém o código-fonte e os dados utilizados no artigo submetido ao XLVII SBPO, que compara algoritmos de Aprendizado Federado (FedAvg, FedProx, FedAvgM, FedAdam) na predição de óbito por febre amarela utilizando Regressão Logística.
 
 ## Base de Dados
-
 - **Fonte:** SINAN/DATASUS - Febre Amarela (casos humanos, 1994-2025)
 - **Download:** [Dados Abertos - Febre Amarela](https://dadosabertos.saude.gov.br/dataset/febre-amarela-em-humanos-e-primatas-nao-humanos)
-- **Pré-processamento:**
-  - Remoção de registros com `OBITO` = `IGN` (ignorado)
-  - Codificação das variáveis para formato binário (0/1):
-    - `SEXO_0_1`: 0 = Feminino, 1 = Masculino
-    - `OBITO_0_1`: 0 = Não, 1 = Sim
-- **Variáveis finais:**
-  - Features: `IDADE`, `SEXO_0_1`
-  - Target: `OBITO_0_1`
-  - Cliente (para FL): `UF` (estado de infecção)
 
-## Modelo - Regressão Logística
-
-- **Biblioteca:** `scikit-learn` (LogisticRegression)
-- **Pergunta de pesquisa:** *Idade e sexo influenciam o risco de óbito por febre amarela?*
-- **Interpretação:** Odds Ratio para cada variável.
-
-## Algoritmos de Aprendizado Federado
-
-| Algoritmo | Descrição | Implementação |
-|-----------|-----------|----------------|
-| **FedAvg** | Média ponderada dos gradientes | Flower (FedAvg) |
-| **FedProx** | Adiciona termo de proximidade (μ=0,1) | Flower (FedProx) |
-| **FedAvgM** | FedAvg com momento (0,9) | Flower (FedAvgM) |
-| **FedAdam** | Otimização adaptativa | Flower (FedAdam) |
+## Bibliotecas Utilizadas
+- `pandas`, `numpy` - Manipulação de dados
+- `matplotlib` - Visualização
+- `scikit-learn` - Regressão Logística
+- `scipy` - Testes estatísticos
+- `flwr[simulation]` - Aprendizado Federado
 
 ## Estrutura do Repositório
 ```bash
@@ -97,11 +81,11 @@ Este repositório contém todos os elementos necessários para reproduzir os exp
     ```
 
 6. Selecione o kernel correto:
-- Com o Jupyter Notbook aberto, clique no nome do kernel no canto superior direito do notebook no VSCode
-- Escolha "FL SBPO (venv)" na lista
+   - Com o Jupyter Notbook aberto, clique no nome do kernel no canto superior direito do notebook no VSCode
+   - Escolha "FL SBPO (venv)" na lista
 
 7. Execução:
-- Caso deseje execute as celulas do Jupyter Notebook utilizando Run All ou Ctrl+F5
+   - Caso deseje execute as celulas do Jupyter Notebook utilizando Run All ou Ctrl+F5
 
 ## Nota sobre o Google Colab
 O Colab não é recomendado para este notebook devido a conflitos de versão do Flower com as bibliotecas pré-instaladas. Utilize o ambiente local (VSCode) para reproduzir os experimentos.
