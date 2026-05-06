@@ -83,7 +83,8 @@ Este repositório contém todos os elementos necessários para reproduzir os exp
    - Faça isso clicando no canto superior direito do Jupyter Notebook deve estar escrito Python (descrição do ambiente virtual)
 
 7. Execução:
-   - Caso deseje execute todas as celulas do Jupyter Notebook utilize o botão Run All ou pressione Ctrl+F5.
+   - Não execute todas as celulas do Jupyter Notebook utilize o botão Run All ou Ctrl+F5.
+   - Os algoritmos de aprendizado federado precisam ser executados um a um devido a estratégia de cliente-servidor.
 
 ## Nota sobre o Google Colab
 O Colab não é recomendado para este notebook devido a conflitos de versão do Flower com as bibliotecas pré-instaladas. Utilize o ambiente local (VSCode) para reproduzir os experimentos.
