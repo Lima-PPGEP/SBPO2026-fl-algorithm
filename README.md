@@ -40,10 +40,11 @@ Este repositório contém todos os elementos necessários para reproduzir os exp
 
 ## Pré-requisitos
 
-- Python 3.12 ou superior
+- Python 3.12, não utilizar versões superiores.
 - VSCode com extensão Jupyter instalada
 
 ## Executando no VSCode
+   - Verifique se o Python, Git, e o VSCode estão instalados antes de executar os passos abaixo.
 
 1. Clone o repositório:
    ```bash
@@ -55,13 +56,13 @@ Este repositório contém todos os elementos necessários para reproduzir os exp
 
    Windows
    ```bash
-   python -m venv venv
+   py -3.12 -m venv venv
    venv\Scripts\activate     # Windows
    ```
 
    Linux
    ```bash
-   python -m venv venv
+   python3.12 -m venv venv
    source venv/bin/activate
    ```
 
@@ -70,22 +71,19 @@ Este repositório contém todos os elementos necessários para reproduzir os exp
    pip install -r requirements.txt
     ```
 
-4. Configure o kernel do Jupyter:
-   ```bash
-   python -m ipykernel install --user --name=fl-sbpo2026 --display-name="FL SBPO (venv)"
-    ```
+4. Após instalação, recarregue a janela do VSCode:
+   - Ctrl+Shift+P → Developer: Reload Window
 
-5. Abra o notebook no VSCode:
-   ```bash
-   code notebooks/spbo2026_federated_learning.ipynb
-    ```
+5. Em seguida selecione o interpretador no VSCode:
+   - Ctrl+Shift+P → Python: Select Interpreter
+   - Escolha o caminho onde o ambiente virtual: .\venv\Scripts\python.exe Ex.: SBPO2026-fl-algorithm\venv\Scripts\python.exe
 
-6. Selecione o kernel correto:
-   - Com o Jupyter Notbook aberto, clique no nome do kernel no canto superior direito do notebook no VSCode
-   - Escolha "FL SBPO (venv)" na lista
+6. Abra o notebook no VSCode:
+   - Verifique se o Jupyter Notebook está utilizando o mesmo ambiente virtual (venv) para execução.
+   - Faça isso clicando no canto superior direito do Jupyter Notebook deve estar escrito Python (descrição do ambiente virtual)
 
 7. Execução:
-   - Caso deseje execute as celulas do Jupyter Notebook utilizando Run All ou Ctrl+F5
+   - Caso deseje execute todas as celulas do Jupyter Notebook utilize o botão Run All ou pressione Ctrl+F5.
 
 ## Nota sobre o Google Colab
 O Colab não é recomendado para este notebook devido a conflitos de versão do Flower com as bibliotecas pré-instaladas. Utilize o ambiente local (VSCode) para reproduzir os experimentos.
